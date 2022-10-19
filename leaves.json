@@ -1,0 +1,3 @@
+[
+    {"type":"Unpaid","duration":"30","description":"Mandatory leave according to the Canada Labour Code"},{"type":"Paid","duration":"20","description":"Mandatory leave"},{"type":"Paid","duration":"25","description":"Mandatory leave"},{"type":"Annual","duration":"30","description":"Mandatory leave"}
+]
