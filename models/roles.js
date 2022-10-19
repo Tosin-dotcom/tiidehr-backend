@@ -17,7 +17,18 @@ module.exports = (sequelize, dataType) => {
                 validate: {
                     notNull: {msg: 'Please enter role description'}
                 }
-            }
+            },
+            createdBy: {
+                type: dataType.INTEGER,
+                allowNull: false,
+                validate: {
+                    notNull: {msg: 'Field cannot be null'}
+                }
+            },
+            updatedBy: {
+                type: dataType.INTEGER,
+                allowNull: true,
+            },
         }
     );
     return Role;
