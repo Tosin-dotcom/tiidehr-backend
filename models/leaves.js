@@ -1,7 +1,7 @@
 
 module.exports = (sequelize, dataType) => {
 
-    const Leave = sequelize.define('temp_leave',
+    const Leave = sequelize.define('leave',
         {
             title: {
                 type: dataType.STRING,
