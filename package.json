@@ -9,6 +9,7 @@
     "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "^0.29.0",
@@ -19,7 +20,7 @@
     "nodemon": "^2.0.20",
     "sequelize": "^6.25.0"
   },
-  "engines":{
-    "node":"^16.17.1"
+  "engines": {
+    "node": "^16.17.1"
   }
 }

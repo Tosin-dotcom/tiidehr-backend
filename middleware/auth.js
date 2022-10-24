@@ -8,7 +8,7 @@ verifyToken = (req, res, next) => {
 
     // reject request if token does not exist
     if (!token) {
-        return res.status(403).send({message : 'Forbidden'})
+        return res.status(403).send({message : 'Forbidden Access'})
     };
     // validate if token exists
     verify(token, config.secretKey, (err, decoded) => {

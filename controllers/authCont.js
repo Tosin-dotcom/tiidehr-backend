@@ -4,7 +4,8 @@ const { constants } = require('./constants')
 const bcrypt = require('bcryptjs');
 const { sign } = require('jsonwebtoken');
 const users = db.users;
-const config = require('../config/authConfig')
+require('dotenv').config();
+// const config = require('../config/authConfig')
 
 exports.authController = {
     signup: (req, res) => {
@@ -41,7 +42,7 @@ exports.authController = {
                     id : user.id,
                     username : user.username
                 }
-                let token = sign(payload, config.secretKey, {expiresIn : 3600})
+                let token = sign(payload, process.env.ACCESS_TOKEN_SECRET, {expiresIn : process.env.ACCESS_TOKEN_LIFE})
 
                 res.status(200).send({accesToken : token});
 

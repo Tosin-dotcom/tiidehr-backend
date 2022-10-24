@@ -5,14 +5,14 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('test-tiidehr.backend:server');
+var debug = require('debug')('tiidehr-backend:server');
 var http = require('http');
-
+require('dotenv').config();
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.DB_PORT || '3000');
 app.set('port', port);
 console.log(`connected to http://localhost:${port}`);
 
