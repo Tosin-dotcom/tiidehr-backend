@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('tiidehr-backend:server');
+var debug = require('debug')('tiidehr-backend-test:server');
 var http = require('http');
 require('dotenv').config();
 /**
@@ -16,7 +16,6 @@ var port = normalizePort(process.env.DB_PORT || '3000');
 app.set('port', port);
 console.log(`connected to http://127.0.0.1:${port}
 connected to http://${process.env.HOST}:${port}`);
-
 /**
  * Create HTTP server.
  */
