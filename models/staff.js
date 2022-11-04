@@ -1,7 +1,7 @@
 
 module.exports = (sequelize, dataType) => {
 
-    const Staff = sequelize.define('temp_staff',
+    const Staff = sequelize.define('staff',
         {
             tempUserId: {
                 type: dataType.INTEGER,

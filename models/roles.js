@@ -1,7 +1,7 @@
 
 module.exports = (sequelize, dataType) => {
 
-    const Role = sequelize.define('temp_role',
+    const Role = sequelize.define('role',
         {
             title: {
                 type: dataType.STRING,
@@ -17,7 +17,18 @@ module.exports = (sequelize, dataType) => {
                 validate: {
                     notNull: {msg: 'Please enter role description'}
                 }
-            }
+            },
+            createdBy: {
+                type: dataType.INTEGER,
+                allowNull: false,
+                validate: {
+                    notNull: {msg: 'Field cannot be null'}
+                }
+            },
+            updatedBy: {
+                type: dataType.INTEGER,
+                allowNull: true,
+            },
         }
     );
     return Role;
